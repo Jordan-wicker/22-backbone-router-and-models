@@ -1,0 +1,96 @@
+@import "./imports/_normalize.scss";
+$site-red: #BE1924;
+$site-blue: #1E2A43;
+$site-beige: #E6DECE;
+
+@mixin column-container(){
+   font-size: 0;
+   letter-spacing: 0;
+   > * {
+      vertical-align: top;
+      font-size: initial;
+      letter-spacing: initial;
+      display: inline-block;
+   }
+}
+
+*{ box-sizing: border-box }
+
+
+body{
+   font-family: 'Abhaya Libre', 'Palatino', serif;
+
+}
+
+#app-container{
+
+header{
+   background: $site-blue;
+   padding: 15px;
+
+img {
+   display: block;
+   max-width: 300px;
+   margin: 0 auto;
+  }
+}
+
+nav {
+   font-size: 0;
+   font-family: "Roboto", "Helvetica", "sans-serif";
+   background: $site-red;
+   color: #fff;
+   @include column-container();
+
+span {
+   border: 2px $site-red solid;
+   text-align: center;
+   width: 20%;
+   margin: 0 auto;
+   display: inline-block;
+   font-weight: 700;
+   padding: 10px 0;
+
+&.active{
+   color: $site-red;
+   background: #fff;
+   }
+      }
+   }
+}
+
+.book-container {
+  width: 70%;
+}
+
+.column-container {
+  height:400px;
+  margin-top: 20px;
+}
+
+.book-image {
+  width: 90%;
+}
+
+.book-title {
+  font-weight: bolder;
+  line-height: .9em;
+  font-size: large;
+  margin-top: 6px;
+}
+
+.book-class {
+  font-size: 35px;
+  font-weight: 900;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.book-category {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.hash-changer {
+  font-size: 24px;
+}
